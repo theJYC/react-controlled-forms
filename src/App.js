@@ -1,5 +1,6 @@
 import React from "react"
 
+import Output from "./components/Output"
 
 //class-based component vs functional component to utilise state:
 class App extends React.Component {
@@ -44,10 +45,6 @@ class App extends React.Component {
   }
 
   render() {
-
-    const emojify = status => {
-      return status ? "✅" : "❎"
-    }
 
     return(
       <div>
@@ -140,23 +137,17 @@ class App extends React.Component {
         </form>
 
         {/* displaying dynamically updated states: */}
-
-        <hr></hr>
-
-        <h3>Name: {this.state.firstName} {this.state.lastName}</h3>
-        <h3>Age: {this.state.age}</h3>
-        <h3>Gender: {this.state.gender}</h3>
-
-        <h3>Destination: {this.state.destination}</h3>
-
-        <h3>Dietary Restrictions:</h3>
-
-        <h4>Kosher: {emojify(this.state.kosher)}</h4>
-        <h4>Vegetarian: {emojify(this.state.vegetarian)}</h4>
-        <h4>Lactose Free: {emojify(this.state.lactoseFree)}</h4>
-
-
-      </div>
+        <Output
+          firstName={this.state.firstName}
+          lastName={this.state.lastName}
+          age={this.state.age}
+          gender={this.state.gender}
+          destination={this.state.destination}
+          kosher={this.state.kosher}
+          vegetarian={this.state.vegetarian}
+          lactoseFree={this.state.lactoseFree}
+        />
+     </div>
       )
   }
 }
