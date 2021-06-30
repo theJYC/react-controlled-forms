@@ -62,31 +62,34 @@ const Form = props => {
           <label>Dietary Restrictions: </label>
           <br />
 
-          <input
-            type="checkbox"
-            name="kosher"
-            checked={props.state.kosher}
-            onChange={props.handleChange}
-          />
-          <label>Kosher</label>
+          <label>Kosher
+            <input
+              type="checkbox"
+              name="kosher"
+              checked={props.state.kosher}
+              onChange={props.handleChange}
+            />
+          </label>
           <br />
 
-          <input
-            type="checkbox"
-            name="vegetarian"
-            checked={props.state.vegetarian}
-            onChange={props.handleChange}
-          />
-          <label>Vegetarian</label>
+          <label>Vegetarian
+            <input
+              type="checkbox"
+              name="vegetarian"
+              checked={props.state.vegetarian}
+              onChange={props.handleChange}
+            />
+          </label>
           <br />
 
-          <input
-            type="checkbox"
-            name="lactoseFree"
-            checked={props.state.lactoseFree}
-            onChange={props.handleChange}
-          />
-          <label>Lactose Free</label>
+          <label>Lactose Free
+            <input
+              type="checkbox"
+              name="lactoseFree"
+              checked={props.state.lactoseFree}
+              onChange={props.handleChange}
+            />
+          </label>
           <br />
 
           <br />
